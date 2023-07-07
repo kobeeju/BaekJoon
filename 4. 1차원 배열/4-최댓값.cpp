@@ -33,7 +33,7 @@ https://www.acmicpc.net/problem/2562
 int main(int argc, char const *argv[])
 {
     int max = 0;
-    int temp;
+    int temp, index;
 
     for (int i = 0; i < 9; i++)
     {
@@ -41,9 +41,11 @@ int main(int argc, char const *argv[])
         if (temp > max)
         {
             max = temp;
+            index = i;
         }
     }
-    printf("%d", max);
+    printf("%d\n", max);
+    printf("%d", index + 1);
 
     return 0;
 }
