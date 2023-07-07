@@ -35,7 +35,6 @@ int main(int argc, char const *argv[])
     int count = 0;
 
     scanf("%d", &num);
-    fseek(stdin, 0, SEEK_SET);
 
     int *arr = (int *)malloc(sizeof(int) * num);
 
@@ -59,6 +58,8 @@ int main(int argc, char const *argv[])
         }
     }
     printf("%d", count);
+
+    free(arr);
 
     return 0;
 }
