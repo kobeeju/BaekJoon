@@ -52,7 +52,8 @@ No
 
 int main(int argc, char const *argv[])
 {
-    int billPrice, count, price, price_count, sum;
+    int billPrice, count, price, price_count;
+    int sum = 0;
 
     scanf("%d", &billPrice);
     fseek(stdin, 0, SEEK_SET);
