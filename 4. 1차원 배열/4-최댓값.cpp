@@ -43,6 +43,7 @@ int main(int argc, char const *argv[])
             max = temp;
         }
     }
+    printf("%d", max);
 
     return 0;
 }
