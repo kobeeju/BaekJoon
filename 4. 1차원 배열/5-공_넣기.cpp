@@ -33,7 +33,8 @@ int main(int argc, char const *argv[])
 {
     int i, j, k, count, basketCount;
     scanf("%d %d", &basketCount, &count);
-    int *basket = (int *)malloc(sizeof(int) * basketCount);
+    // int *basket = (int *)malloc(sizeof(int) * basketCount);
+    int *basket = (int *)calloc(basketCount, sizeof(int));
 
     for (int l = 0; l < count; l++)
     {
@@ -41,7 +42,7 @@ int main(int argc, char const *argv[])
 
         for (int f = i; f <= j; f++)
         {
-            basket[f] = k;
+            basket[f - 1] = k;
         }
     }
 
@@ -49,6 +50,8 @@ int main(int argc, char const *argv[])
     {
         printf("%d ", basket[s]);
     }
+
+    free(basket);
 
     return 0;
 }
