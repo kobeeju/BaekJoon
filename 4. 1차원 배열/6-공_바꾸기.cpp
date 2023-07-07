@@ -46,9 +46,9 @@ int main(int argc, char const *argv[])
     {
         scanf("%d %d", &i, &j);
 
-        temp = i;
-        i = j;
-        j = temp;
+        temp = basket[i - 1];
+        basket[i - 1] = basket[j - 1];
+        basket[j - 1] = temp;
     }
 
     for (int l = 0; l < basketCount; l++)
