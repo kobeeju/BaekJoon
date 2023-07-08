@@ -44,18 +44,24 @@ void Answer1(int m, int n)
         else
         {
             arr[index] = s;
+            index++;
         }
-        index++;
     }
+
+    for (int i = 0; i <= index; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
 
     int sum = 0;
     int min = arr[0];
-    for (int i = 0; i <= index; i++)
+    for (int i = 0; i < index; i++)
     {
         sum += pow(arr[i], 2);
-        if (min > arr[i])
+        if (min < arr[i])
         {
-            min = arr[i];
+            min = pow(arr[i], 2);
         }
     }
 
